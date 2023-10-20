@@ -10,7 +10,7 @@ app.listen(PORT, () => {
   console.log(`Server Started on ${PORT}`);
 });
 
-app.use(cors);
+app.use(cors())
 
 app.get("/", (req, res) => {
   console.log("here in generateSudoku");
