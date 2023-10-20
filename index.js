@@ -2,12 +2,15 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const sudoku = require("sudoku");
+const cors = require("cors");
 
 const PORT = process.env.PORT || 2015;
 
 app.listen(PORT, () => {
   console.log(`Server Started on ${PORT}`);
 });
+
+app.use(cors);
 
 app.get("/", (req, res) => {
   console.log("here in generateSudoku");
